@@ -1,0 +1,36 @@
+version: 2.1
+
+jobs:
+  test:
+    docker:
+      - image: node:14  # Choisissez une image Docker avec Node.js
+
+    working_directory: ~/app
+
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+            - v1-devDependencies-{{checksum "package.json"}}
+            - v1-devDependencies- 
+
+      # Installer les dépendances
+      - run:
+          name: Install Dependencies
+          command: npm install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-devDependencies-{{checksum "package.json"}}
+
+      # Exécuter les tests
+      - run:
+          name: Run Tests
+          command: npm test
+
+workflows:
+  version: 2
+  test:
+    jobs:
+      - test
