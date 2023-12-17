@@ -1,0 +1,58 @@
+CS -> StandardJS
+
+npm install eslint prettier --save-dev
+
+Étape 2: Configuration de ESLint
+
+npx eslint --init
+
+npm install eslint eslint-config-standard --save-dev
+
+
+Étape 3: Installation des plugins ESLint pour Prettier
+
+npm install eslint-plugin-prettier eslint-config-prettier --save-dev
+
+Étape 4: Configuration de ESLint avec Prettier
+
+// .eslintrc
+{
+  "extends": "standard",
+  "rules": {
+    // Ajoutez des règles spécifiques si nécessaire
+  }
+}
+
+
+Étape 5: Configuration de Prettier
+
+// .eslintrc
+{
+  "extends": ["standard", "prettier"],
+  "rules": {
+    // Ajoutez des règles spécifiques si nécessaire
+  }
+}
+
+Étape 6: Installation de Prettier (optionnel)
+npm install prettier --save-dev
+
+
+
+
+Étape 7: Utilisation de ESLint et Prettier
+
+# Linting avec ESLint
+npx eslint .
+
+# Formatage avec Prettier
+npx prettier --write .
+
+
+test:
+npm install mocha chai sinon --save-dev
+
+Configurer les scripts dans package.json :
+"scripts": {
+  "test": "mocha"
+}
