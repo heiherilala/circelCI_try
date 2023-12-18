@@ -5,16 +5,16 @@
 
 class Ingredient {
 public:
-    Ingredient();  // Déclaration du constructeur par défaut
+  Ingredient(); // Déclaration du constructeur par défaut
 
-    Ingredient(const std::string& name, int quantity);
+  Ingredient(const std::string &name, int quantity);
 
-    std::string getName() const;
-    int getQuantity() const;
+  std::string getName() const;
+  int getQuantity() const;
 
 private:
-    std::string name;
-    int quantity;
+  std::string name;
+  int quantity;
 };
 
 #endif // INGREDIENT_H

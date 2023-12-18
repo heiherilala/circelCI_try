@@ -17,30 +17,42 @@ This C++ application simulates a rice cooker through a Command Line Interface (C
 ## Installation
 
 1. Clone the repository:
+2. Install clang-format:
 
+    ex in apt-get:
 
+        sudo apt-get install clang-format
+
+You can adjust the installation command according to your package manager (apt-get, brew, etc.) if you're not using a Debian-based system.
+
+3. Install clang-tidy:
+
+    ex in apt-get:
+
+        sudo apt-get install clang-tidy
 
 ## Execution
 
-Build the application using CMake:
+Build the application using scripte :
 
-    cmake .
+    ./build.ch
 
-Run the application:
+Run the application, after the buile you will have an executable "MonProgramme"
 
-    ./rice_cooker_app
+    ./MonProgramme
 
 ## Coding Standard (CS)
 
 The code follows the LLVM coding standard to ensure consistency and maintainability. Please refer to the official LLVM Coding Standards documentation for more details.
-Linter
 
-The code is linted using ClangFormat to maintain a consistent coding style. It is recommended to run ClangFormat before committing changes to ensure the codebase's uniformity.
-How to Run ClangFormat
+## Linter
 
-Install ClangFormat:
+The code is linted using clang-tidy :
 
-    sudo apt-get install clang-format
+    clang-tidy *.cpp
+
+
+## Format
 
 Run ClangFormat on the entire codebase:
 
@@ -50,10 +62,6 @@ Run ClangFormat on the entire codebase:
 
 The application includes
 
-unit tests using the Catch2 framework. To run the tests, use the following steps:
+unit tests using the Catch2 framework. To run the tests, you can directly use the script "test.sh"
 
-Run the tests:
-
-    ./tests
-
-The tests will verify the functionality of various components, including the RiceCooker and Validator classes.
+    ./test.sh

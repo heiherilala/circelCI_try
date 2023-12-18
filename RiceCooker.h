@@ -1,19 +1,18 @@
 #ifndef RICE_COOKER_H
 #define RICE_COOKER_H
 
+#include "Ingredient.h"
 #include <string>
 #include <vector>
-#include "Ingredient.h"
 
 class RiceCooker {
 public:
-    RiceCooker();
+  RiceCooker();
 
-    void prepareRecipe(std::string recipeChoice);
+  void prepareRecipe(std::string recipeChoice);
 
 private:
-    std::vector<Ingredient> ingredients;
-
+  std::vector<Ingredient> ingredients;
 };
 
 #endif // RICE_COOKER_H

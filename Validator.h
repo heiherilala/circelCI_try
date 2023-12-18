@@ -5,10 +5,10 @@
 
 class Validator {
 public:
-    static int validateAndGetInt(const std::string& prompt);
+  static int validateAndGetInt(const std::string &prompt);
 
 private:
-    // Add other validation functions if needed
+  // Add other validation functions if needed
 };
 
 #endif // VALIDATOR_H

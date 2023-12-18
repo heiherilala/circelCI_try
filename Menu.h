@@ -3,7 +3,7 @@
 
 class Menu {
 public:
-    static int displayMainMenu();
+  static int displayMainMenu();
 };
 
 #endif // MENU_H

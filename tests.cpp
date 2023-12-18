@@ -10,6 +10,4 @@ TEST_CASE("Ingredient - Constructor") {
     REQUIRE(ingredient.getName() == "Rice");
     REQUIRE(ingredient.getQuantity() == 200);
   }
-
 }
-
