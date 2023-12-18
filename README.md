@@ -4,7 +4,7 @@ A simple CLI application for simulating a rice cooker.
 
 ## Prerequisites
 
-- Node.js installed (version x.x.x)
+- Node.js installed 
 - npm installed
 
 ## Description
@@ -42,3 +42,22 @@ This project uses ESLint as the linter to ensure code quality and style consiste
 Fix linting issues automatically (where possible):
 
       npx eslint . --fix
+
+## Format
+
+We use prettier for fomat:
+
+      npx prettier --write .
+
+## Test
+
+      npm run test
+
+## CI
+
+here's an example of a successful CI we have with CircleCI
+
+<img
+  src="/image/js.png"
+  alt="CircleCI succes example"
+  title="CircleCI succes example">
