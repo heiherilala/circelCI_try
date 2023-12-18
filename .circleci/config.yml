@@ -1,33 +1,35 @@
-version: 2
+version: 2.1
+orbs:
+  node: circleci/node@5.0.2
+  heroku: circleci/heroku@1.2.6
 
 jobs:
-  build:
-    docker:
-      - image: cimg/openjdk:21.0.0
-
-    working_directory: ~/circle-ci
-
-    environment:
-      JVM_OPTS: -Xmx3200m
-      TERM: dumb
+  build_and_test: # this can be any name you choose
+    executor: node/default # use the default executor defined within the orb
     steps:
       - checkout
-
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "build.gradle" }}
-            - v1-dependencies-
-
-      - run: gradle dependencies
-
-      - save_cache:
-          paths:
-            - ~/.gradle
-          key: v1-dependencies-{{ checksum "build.gradle" }}
-
-      # run tests!
-      - run: gradle test
-
+      - node/install-packages:
+          pkg-manager: npm
       - run:
-          name: Checkstyle
-          command: ./gradlew checkstyleMain checkstyleTest
+          command: npm run test
+          name: Run tests
+      - run:
+          command: npx eslint .
+          name: Run style tests
+      - persist_to_workspace:
+          root: ~/project
+          paths:
+            - .
+
+  deploy: # this can be any name you choose
+    executor: heroku/default
+    steps:
+      - attach_workspace:
+          at: ~/project
+      - heroku/deploy-via-git:
+          force: true # force push when pushing to the heroku remote, see: https://devcenter.heroku.com/articles/git
+
+workflows:
+  test_my_app:
+    jobs:
+      - build_and_test

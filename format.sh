@@ -1,3 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
-find src -name "*.java" -exec java -jar google-java-format-1.18.1-all-deps.jar --replace {} \;
+# Formatage du code JavaScript selon le Google JavaScript Style Guide
+find . -name "*.js" -exec prettier --write {} \;
