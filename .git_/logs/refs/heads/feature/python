@@ -1,2 +1,5 @@
 0000000000000000000000000000000000000000 35c24a076591b7502fc2f83db2be6906d880d769 herilala <hei.herilala@gmail.com> 1702916123 +0300	branch: Created from HEAD
 35c24a076591b7502fc2f83db2be6906d880d769 4174ffc49b2e2ae679f65c5c15bb0cd973935d96 herilala <hei.herilala@gmail.com> 1702916133 +0300	commit: first commit
+4174ffc49b2e2ae679f65c5c15bb0cd973935d96 35c24a076591b7502fc2f83db2be6906d880d769 herilala <hei.herilala@gmail.com> 1702925577 +0300	reset: moving to HEAD~1
+35c24a076591b7502fc2f83db2be6906d880d769 4174ffc49b2e2ae679f65c5c15bb0cd973935d96 herilala <hei.herilala@gmail.com> 1702925658 +0300	pull: Fast-forward
+4174ffc49b2e2ae679f65c5c15bb0cd973935d96 653235724ca86cb18d5bae9b1bc01622b38d4152 herilala <hei.herilala@gmail.com> 1702925747 +0300	commit: feat: add file in gitignore

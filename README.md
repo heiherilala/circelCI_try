@@ -10,7 +10,7 @@ This project is a command-line interface (CLI) application simulating a rice coo
 ## Installation
 1. Clone the repository:
 
-    Install dependencies:
+2. Install dependencies:
 
         pip install -r requirements.txt
         pip install flake8 black
@@ -36,3 +36,10 @@ The project uses flake8 as a linter to enforce PEP 8 standards. Run the linter w
 Formatage avec :
 
     black .
+
+## Test
+
+Run all test file :
+
+    python test_cooker.py 
+    python test_ingredients.py 
