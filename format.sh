@@ -1,4 +1,3 @@
-#!/bin/bash
+#!/bin/sh
 
-# Formatage du code Python selon PEP 8
-find . -name "*.py" -exec autopep8 --in-place --aggressive --aggressive {} \;
+find src -name "*.java" -exec java -jar google-java-format-1.18.1-all-deps.jar --replace {} \;

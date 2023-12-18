@@ -1,0 +1,16 @@
+Coding Standard : Google Java Style Guide
+
+format:
+
+--> download : google-java-format-1.18.1-all-deps.jar
+--> execute : format.sh
+
+test:
+
+add jUnit dependency:
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>test</scope>
+        </dependency>
