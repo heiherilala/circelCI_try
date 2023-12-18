@@ -1,4 +1,4 @@
 #!/bin/bash
 
-# Formatage du code JavaScript selon le Google JavaScript Style Guide
-find . -name "*.js" -exec prettier --write {} \;
+# Formatage du code Python selon PEP 8
+find . -name "*.py" -exec autopep8 --in-place --aggressive --aggressive {} \;
