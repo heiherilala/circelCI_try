@@ -1,45 +1,38 @@
-# WalletApp Python
+# Rice Cooker CLI
 
-WalletApp est une application simple de gestion de portefeuille en Python.
+## Prerequisites
+- Python 3.x
+- `pip` package manager
 
-## Fonctionnalités
+## Description
+This project is a command-line interface (CLI) application simulating a rice cooker. It allows users to choose recipes, add ingredients, and initiate the cooking process. The application follows a modular and object-oriented design, promoting clean code practices.
 
-- Création de compte utilisateur
-- Connexion avec mot de passe
-- Affichage du solde
-- Historique des transactions
-- Dépôt d'argent
-- Retrait d'argent
-- Transfert d'argent
+## Installation
+1. Clone the repository:
 
-## Comment utiliser
+    Install dependencies:
 
-1. **Exécution :** Assurez-vous d'avoir Python installé sur votre système. Utilisez la commande suivante pour lancer le programme :
+        pip install -r requirements.txt
+        pip install flake8 black
 
-    ```bash
-    python WalletApp.py
-    ```
+## Execution
 
-2. **Suivez les instructions à l'écran :** Le programme vous guidera pour créer un compte, vous connecter et effectuer des opérations de portefeuille.
+Run the main script to start the CLI application:
 
-## Notes supplémentaires
+    python main.py
 
-- Ce projet est un exemple éducatif simple et peut être étendu pour inclure des fonctionnalités plus avancées.
-- Assurez-vous de respecter les conventions de nommage et de commentaires lors de l'extension du projet.
+## Coding Standard (PEP 8)
 
-## Remarque importante
+The project follows the PEP 8 coding style guide for Python. It ensures consistency and readability in the codebase.
 
-Pour accéder à votre portefeuille, assurez-vous d'avoir créé un compte au préalable. Si vous n'avez pas encore de compte, choisissez l'option "Créer un Compte" avant de vous connecter.
+## Linter
 
-## Conventions de Codage (Coding Standards) et Formatage du Code
+The project uses flake8 as a linter to enforce PEP 8 standards. Run the linter with the following command:
 
-Nous suivons les directives du [PEP 8](https://www.python.org/dev/peps/pep-0008/).
+    flake8 .
 
-### Comment formater le code
+## Formatage
 
-Le code Python est automatiquement formaté en utilisant `autopep8`. Assurez-vous de l'avoir installé.
+Formatage avec :
 
-Pour formater le code manuellement, exécutez le script suivant :
-
-```bash
-./format.sh
+    black .

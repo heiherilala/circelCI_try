@@ -27,7 +27,8 @@ jobs:
       - run:
           name: Run Unit Tests
           command: |
-            python test_calculator.py    
+            python test_cooker.py 
+            python test_ingredients.py 
 
 workflows:
   version: 2
