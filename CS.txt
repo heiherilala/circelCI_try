@@ -1,39 +1,33 @@
-CS -> PEP 8
 
+CS -> LLVM (Low Level Virtual Machine)
 
-Étape 1: Installation de flake8 et black
+Étape 1: Installation de clang-format et clang-tidy
 
-pip install flake8 black
+    Installation de clang-format:
+ex pour apt-get:
+sudo apt-get install clang-format
 
-Étape 2: Configuration de flake8
+Vous pouvez ajuster la commande d'installation en fonction de votre gestionnaire de paquets (apt-get, brew, etc.) si vous n'utilisez pas un système basé sur Debian.
 
-Créez un fichier de configuration ".flake8" ->
+Installation de clang-tidy:
+ex pour apt-get:
+    sudo apt-get install clang-tidy
 
-[flake8]
-max-line-length = 120
-exclude = .git,__pycache__,venv
-extend-ignore = E203, W503
+Étape 2: Configuration de clang-format
 
-Étape 3: Configuration de black
+Créez un fichier de configuration ".clang-format", comende pour en créer un:
+clang-format -style=llvm -dump-config > .clang-format
 
-Créez un fichier de configuration "pyproject.toml" ->
+Étape 3: Utilisation de clang-format
 
-[tool.black]
-line-length = 120
-exclude = '\.git|__pycache__|venv'
+clang-format -i *.cpp
 
+Étape 4: Configuration de clang-tidy
 
+Créez un fichier de configuration .clang-tidy ->
+Checks: '*'
+HeaderFilterRegex: '.*'
 
-Étape 4: Utilisation de flake8 et black
+Étape 5: Utilisation de clang-tidy
 
-
-# Linting avec flake8
-flake8 .
-
-# Formatage avec black
-black .
-
-
-
-test:
- use unittest
+clang-tidy your_source_file.cpp

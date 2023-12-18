@@ -3,31 +3,35 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: python:3.8
+      - image: cimg/base:current-22.04
 
     steps:
       - checkout
 
+      # Installez clang-format
       - run:
-          name: Install dependencies
-          command: |
-            pip install -r requirements.txt
+          name: Install clang-format
+          command: sudo apt-get update && sudo apt-get install -y clang-format
 
+      # Installez clang-tidy
       - run:
-          name: Install  and black
-          command: |
-            pip install flake8 black
+          name: Install clang-tidy
+          command: sudo apt-get install -y clang-tidy
 
+      # Exécutez clang-format pour vérifier le style
       - run:
-          name: Run Flake8 and Black
-          command: |
-            flake8
-            black --check .
+          name: Check code style with clang-format
+          command: clang-format --version && clang-format -n ./*.cpp
 
+      # Exécutez clang-tidy pour analyser le code
       - run:
-          name: Run Unit Tests
-          command: |
-            python test_calculator.py    
+          name: Run clang-tidy
+          command: clang-tidy --version && clang-tidy ./*.cpp
+
+      # Exécutez votre script de test
+      - run:
+          name: Run tests
+          command: ./test.sh
 
 workflows:
   version: 2

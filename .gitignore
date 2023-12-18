@@ -1,0 +1,34 @@
+# Ignore les fichiers générés par la compilation C++
+*.o
+*.out
+*.exe
+
+# Ignore les fichiers générés par CMake
+/CMakeFiles
+/CMakeCache.txt
+/CMakeScripts
+/CMakeScripts
+/*.cmake
+/*.cbp
+/*.gcda
+/*.gcno
+/*.gcov
+
+# Ignore les fichiers générés par Visual Studio Code
+.vscode/
+
+# Ignore les fichiers de construction et les exécutables générés
+/build/
+/bin/
+/out/
+
+# Ignore les fichiers générés par clang-format
+/.clang-format
+
+# Ignore les fichiers générés par clang-tidy
+/.clang-tidy
+
+# Ignore les fichiers et répertoires spécifiques à l'environnement
+/.vscode/
+.DS_Store
+Thumbs.db

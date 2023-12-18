@@ -1,45 +1,59 @@
-# WalletApp Python
+# Rice Cooker Application
 
-WalletApp est une application simple de gestion de portefeuille en Python.
+## Prerequisites
+- C++ compiler with C++17 support
+- Catch2 (for unit testing)
 
-## Fonctionnalités
+## Description
 
-- Création de compte utilisateur
-- Connexion avec mot de passe
-- Affichage du solde
-- Historique des transactions
-- Dépôt d'argent
-- Retrait d'argent
-- Transfert d'argent
+This C++ application simulates a rice cooker through a Command Line Interface (CLI). Users can choose from various recipes, add ingredients, and simulate the cooking process.
 
-## Comment utiliser
+### Features
+- Menu-driven interface for recipe selection
+- Dynamic ingredient addition with quantity
+- Recipe preparation simulation
+- Error handling and user input validation
 
-1. **Exécution :** Assurez-vous d'avoir Python installé sur votre système. Utilisez la commande suivante pour lancer le programme :
+## Installation
 
-    ```bash
-    python WalletApp.py
-    ```
+1. Clone the repository:
 
-2. **Suivez les instructions à l'écran :** Le programme vous guidera pour créer un compte, vous connecter et effectuer des opérations de portefeuille.
 
-## Notes supplémentaires
 
-- Ce projet est un exemple éducatif simple et peut être étendu pour inclure des fonctionnalités plus avancées.
-- Assurez-vous de respecter les conventions de nommage et de commentaires lors de l'extension du projet.
+## Execution
 
-## Remarque importante
+Build the application using CMake:
 
-Pour accéder à votre portefeuille, assurez-vous d'avoir créé un compte au préalable. Si vous n'avez pas encore de compte, choisissez l'option "Créer un Compte" avant de vous connecter.
+    cmake .
 
-## Conventions de Codage (Coding Standards) et Formatage du Code
+Run the application:
 
-Nous suivons les directives du [PEP 8](https://www.python.org/dev/peps/pep-0008/).
+    ./rice_cooker_app
 
-### Comment formater le code
+## Coding Standard (CS)
 
-Le code Python est automatiquement formaté en utilisant `autopep8`. Assurez-vous de l'avoir installé.
+The code follows the LLVM coding standard to ensure consistency and maintainability. Please refer to the official LLVM Coding Standards documentation for more details.
+Linter
 
-Pour formater le code manuellement, exécutez le script suivant :
+The code is linted using ClangFormat to maintain a consistent coding style. It is recommended to run ClangFormat before committing changes to ensure the codebase's uniformity.
+How to Run ClangFormat
 
-```bash
-./format.sh
+Install ClangFormat:
+
+    sudo apt-get install clang-format
+
+Run ClangFormat on the entire codebase:
+
+    clang-format -i $(find . -name '*.cpp' -or -name '*.h')
+
+## Unit Testing
+
+The application includes
+
+unit tests using the Catch2 framework. To run the tests, use the following steps:
+
+Run the tests:
+
+    ./tests
+
+The tests will verify the functionality of various components, including the RiceCooker and Validator classes.
