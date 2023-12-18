@@ -1,52 +1,44 @@
-# WalletApp JavaScript
+# Project Title
 
-WalletApp est une application simple de gestion de portefeuille en JavaScript (Node.js).
+A simple CLI application for simulating a rice cooker.
 
-## Fonctionnalités
+## Prerequisites
 
-- Création de compte utilisateur
-- Connexion avec mot de passe
-- Affichage du solde
-- Historique des transactions
-- Dépôt d'argent
-- Retrait d'argent
-- Transfert d'argent
+- Node.js installed (version x.x.x)
+- npm installed
 
-## Comment utiliser
+## Description
 
-1. **Installation des dépendances :** Assurez-vous d'avoir Node.js installé sur votre système. Utilisez la commande suivante pour installer les dépendances :
+This project is a command-line interface (CLI) application that simulates the functionality of a rice cooker. Users can choose from various recipes such as cooking rice, boiling water, or making soup. The CLI guides the user through the process of adding ingredients, setting temperature, and duration of cooking.
 
-   ```bash
-   npm install
-   ```
+The application is designed to be user-friendly, interactive, and follows the principles of Object-Oriented Programming (OOP). It includes error handling for user input and ensures a seamless experience even in case of unexpected inputs.
 
-2. **Exécution :** Après l'installation, lancez le programme avec la commande :
+## Installation
 
-   ```bash
-   node WalletApp.js
-   ```
+1. Clone the repository:
+2. Navigate to the project directory:
+3. Install dependencies:
 
-3. **Suivez les instructions à l'écran :** Le programme vous guidera pour créer un compte, vous connecter et effectuer des opérations de portefeuille.
+         npm install
 
-## Notes supplémentaires
+## Execution
 
-- Ce projet est un exemple éducatif simple et peut être étendu pour inclure des fonctionnalités plus avancées.
-- Assurez-vous de respecter les conventions de nommage et de commentaires lors de l'extension du projet.
+Run the application using the following command:
 
-## Remarque importante
+      node main.js 
 
-Pour accéder à votre portefeuille, assurez-vous d'avoir créé un compte au préalable. Si vous n'avez pas encore de compte, choisissez l'option "Créer un Compte" avant de vous connecter.
+Follow the on-screen instructions to interact with the CLI and simulate the rice cooker operations.
 
-## Conventions de Codage (Coding Standards) et Formatage du Code
+## Coding Standard (CS)
 
-Nous suivons le [Google JavaScript Style Guide](https://google.github.io/styleguide/javascriptguide.xml).
+This project follows the StandardJS coding standard. Ensure that your code adheres to the style guidelines defined by StandardJS. You can check for style violations using the linting tool.
 
-### Comment formater le code
+## Linter
 
-Le code JavaScript est automatiquement formaté en utilisant `prettier`. Assurez-vous de l'avoir installé.
+This project uses ESLint as the linter to ensure code quality and style consistency. You can run ESLint using the following command:
 
-Pour formater le code manuellement, exécutez le script suivant :
+      npx eslint .
 
-```bash
-./format.sh
-```
+Fix linting issues automatically (where possible):
+
+      npx eslint . --fix
