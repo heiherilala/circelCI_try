@@ -10,7 +10,7 @@ WalletApp est une application simple de gestion de portefeuille en JavaScript (N
 - Historique des transactions
 - Dépôt d'argent
 - Retrait d'argent
-- Transfert d'argent
+- Transfert d'argent 
 
 ## Comment utiliser
 
